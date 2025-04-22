@@ -255,15 +255,12 @@ void editWorker(Worker workers[], int count) {
         transform(searchName.begin(), searchName.end(), searchName.begin(), ::tolower);
 
         int matches = 0;
-        cout << "\nMatching workers:" << endl;
         for (int i = 0; i < count; i++) {
             string workerName = workers[i].name;
             transform(workerName.begin(), workerName.end(), workerName.begin(), ::tolower);
             if (workerName == searchName) {
                 matches++;
-                cout << "\nWorker " << matches << ":" << endl;
-                displayWorker(workers[i]);
-                cout << "------------------------" << endl;
+                cout << "Woker ID " << workers[i].id <<" has been found" << endl;
             }
         }
 
